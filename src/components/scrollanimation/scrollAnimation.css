@@ -1,0 +1,47 @@
+.scroll-down{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.scroll-down span{
+    color: #333333;
+    margin-left: 10px;
+}
+.scroll-down span .fa-solid{
+    margin-left: 5px;
+	animation: wheel 2.5s infinite ;
+}
+.mouse {
+	width: 25px;
+	height: 40px;
+	border: 2px solid #333333;
+	border-radius: 60px;
+	position: relative;
+}
+.mouse:before {
+		content: '';
+		width: 5px;
+		height: 5px;
+		position: absolute;
+		top: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		background-color:#333333;
+		border-radius: 50%;
+		opacity: 1;
+		animation: wheel 2s infinite;
+		-webkit-animation: wheel 2.5s infinite;
+}
+@keyframes wheel {
+	to {
+		opacity: 0;
+		top: 20px;
+	}
+}
+
+@-webkit-keyframes wheel {
+	to {
+		opacity: 0;
+		top: 60px;
+	}
+}
