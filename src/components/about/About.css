@@ -1,4 +1,6 @@
 .about__img{
+    width: 500px;
+    height: 400px;
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
     animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
@@ -16,15 +18,25 @@
 }
 .about_box{
     background-color: var(--container-color);
-    border-radius: 0.75rem;
+    border-radius: 30px 5px 30px 5px;
     text-align: center;
     padding:1rem 1.25rem;
     transition: 0.2s ease-in-out;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
+.about_box:nth-child(2){
+    border-radius: 5px 30px 5px 30px;
+
+}
+.about_box.about_box:nth-child(2):hover{
+    transform: translate(0, -10px);
+    border-radius: 30px 5px 30px 5px;
+}
 .about_box:hover{
     transform: translate(0, -10px);
+    border-radius: 5px;
+    border-radius: 5px 30px 5px 30px;
 }
 .about_box .about_icon{
     font-size: 1.2rem;
@@ -43,4 +55,67 @@
 .about__description{
     padding: 0 4rem 0 0;
     margin-bottom: var(--mb-2-5);
+    font-size: var(--small-font-size)
 }
+
+/* media query */
+
+    /* Breakpoints */
+
+    /* for large devices */
+    @media screen and (max-width:992px){
+        /* .about__container{
+            grid-template-columns: 1fr;
+            row-gap: 2.5rem;
+        } */
+        .about__img{
+            width: 400px;
+            height: 300px;
+        }
+      }
+          /* for large devices */
+          /* for medium size devices */
+      @media screen and (max-width:768px){
+        .about__container{
+            grid-template-columns: 1fr;
+            row-gap: 2.5rem;
+        }
+        .about__img{
+            margin-left: 10rem;
+            width: 300px;
+            height: 200px;
+        }
+        .about__data{
+            margin-left: 3.2rem;
+            text-align: center;
+        }
+      }
+      @media screen and (max-width:576px){
+        .about__img{
+            margin-left: -.1rem;
+        }
+        .about__data{
+            margin-left: -2px;
+        }
+        .about_info{
+            grid-template-columns: repeat(1, 1fr);
+        }
+      }
+          /* for medium size devices */
+  
+          /* for small devices */
+      @media screen and (max-width:380px){
+        .about__img{
+            margin-right: -150px;
+        }
+        .about_box{
+            /* padding: ?0; */
+            width: 100%;
+        }
+        .about__description {
+            margin-left: 10px;
+            width: 300px;
+            text-align: justify;
+            font-size: .8rem;
+        }
+    }
