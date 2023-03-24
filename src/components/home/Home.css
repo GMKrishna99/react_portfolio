@@ -189,7 +189,7 @@
         .home_description {
             max-width: 300px;
             font-size: .7rem;
-            margin: 0;
+            /* margin: 0; */
         }
         .nav_toggle .fa-solid{
             padding-left: -500px;
