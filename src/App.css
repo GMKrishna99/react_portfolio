@@ -112,9 +112,11 @@ font-family: 'Pacifico', cursive; */
   .section{
     padding: 6rem 0 2rem;
   }
-  .section-title{
+  .section_title{
     font-size: var(--h1-font-size);
     color: var(--title-color);
+    letter-spacing: 3px;
+    text-transform: uppercase;
   }
   .section_subtitle{
     display: block;
@@ -177,6 +179,9 @@ font-family: 'Pacifico', cursive; */
         /* for large devices */
         /* for medium size devices */
     @media screen and (max-width:768px){
+      body{
+        margin: 0 0 var(--header-height) 0;
+      }
       .section{
         padding: 2rem 0 4rem;
       }
